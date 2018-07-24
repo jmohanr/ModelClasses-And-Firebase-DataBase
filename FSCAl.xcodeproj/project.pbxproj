@@ -20,6 +20,10 @@
 		842A906620E3A4FE00BC687D /* FSCAlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A906520E3A4FE00BC687D /* FSCAlTests.swift */; };
 		842A907120E3A4FE00BC687D /* FSCAlUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A907020E3A4FE00BC687D /* FSCAlUITests.swift */; };
 		847CBEA720EA4FA60005C2AA /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CBEA620EA4FA60005C2AA /* CollectionViewCell.swift */; };
+		84C01ACA2107467D00FD6619 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C01AC92107467D00FD6619 /* SplashViewController.swift */; };
+		84C01ACC2107468A00FD6619 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C01ACB2107468A00FD6619 /* LogInViewController.swift */; };
+		84C01ACF2107469700FD6619 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C01ACD2107469700FD6619 /* ThirdViewController.swift */; };
+		84C01AD02107469700FD6619 /* WalkThroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C01ACE2107469700FD6619 /* WalkThroughViewController.swift */; };
 		84D0333B20EB7844007143C4 /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0333A20EB7844007143C4 /* CoreData.swift */; };
 		84D0333D20EB8C3B007143C4 /* SwipeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0333C20EB8C3B007143C4 /* SwipeVC.swift */; };
 		84D7088520E4E3C900126D10 /* SecViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D7088420E4E3C900126D10 /* SecViewController.swift */; };
@@ -71,6 +75,10 @@
 		842A907020E3A4FE00BC687D /* FSCAlUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSCAlUITests.swift; sourceTree = "<group>"; };
 		842A907220E3A4FE00BC687D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		847CBEA620EA4FA60005C2AA /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		84C01AC92107467D00FD6619 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		84C01ACB2107468A00FD6619 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		84C01ACD2107469700FD6619 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		84C01ACE2107469700FD6619 /* WalkThroughViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkThroughViewController.swift; sourceTree = "<group>"; };
 		84D0333A20EB7844007143C4 /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
 		84D0333C20EB8C3B007143C4 /* SwipeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeVC.swift; sourceTree = "<group>"; };
 		84D7088420E4E3C900126D10 /* SecViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecViewController.swift; sourceTree = "<group>"; };
@@ -137,12 +145,16 @@
 		841B6CB020E61848007EEE66 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				84C01ACD2107469700FD6619 /* ThirdViewController.swift */,
+				84C01ACE2107469700FD6619 /* WalkThroughViewController.swift */,
 				842A905220E3A4F900BC687D /* ViewController.swift */,
 				84D7088420E4E3C900126D10 /* SecViewController.swift */,
 				84D0333C20EB8C3B007143C4 /* SwipeVC.swift */,
 				84FD425B2105A2B000224610 /* ContactsViewController.swift */,
 				84FD42632105C07600224610 /* FBViewController.swift */,
+				84C01ACB2107468A00FD6619 /* LogInViewController.swift */,
 				84FD42692105D13F00224610 /* TableViewController.swift */,
+				84C01AC92107467D00FD6619 /* SplashViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -408,15 +420,19 @@
 				84FD42642105C07600224610 /* FBViewController.swift in Sources */,
 				84FD425C2105A2B000224610 /* ContactsViewController.swift in Sources */,
 				84FD42662105C33800224610 /* ArtistModel.swift in Sources */,
+				84C01AD02107469700FD6619 /* WalkThroughViewController.swift in Sources */,
 				841B6CA420E6130E007EEE66 /* FSCAI.xcdatamodeld in Sources */,
 				842A905320E3A4F900BC687D /* ViewController.swift in Sources */,
 				84FD426A2105D13F00224610 /* TableViewController.swift in Sources */,
+				84C01ACC2107468A00FD6619 /* LogInViewController.swift in Sources */,
 				84D0333D20EB8C3B007143C4 /* SwipeVC.swift in Sources */,
+				84C01ACF2107469700FD6619 /* ThirdViewController.swift in Sources */,
 				84D7088920E4E74300126D10 /* TableViewCell.swift in Sources */,
 				84D0333B20EB7844007143C4 /* CoreData.swift in Sources */,
 				842A905120E3A4F900BC687D /* AppDelegate.swift in Sources */,
 				84D7088B20E4FA7100126D10 /* HeroStats.swift in Sources */,
 				841B6CA820E613FE007EEE66 /* APIService.swift in Sources */,
+				84C01ACA2107467D00FD6619 /* SplashViewController.swift in Sources */,
 				84FD42682105C3EA00224610 /* ViewControllerTableViewCell.swift in Sources */,
 				841B6CAE20E616F0007EEE66 /* Extensions.swift in Sources */,
 				84D7088520E4E3C900126D10 /* SecViewController.swift in Sources */,
