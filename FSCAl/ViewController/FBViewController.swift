@@ -14,6 +14,7 @@ class FBViewController: UIViewController{
     var contacts: [NSManagedObject] = []
     @IBOutlet weak var textFieldEmail: UITextField!
     @IBOutlet weak var textFieldPassword: UITextField!
+      @IBOutlet weak var toolBar: UIToolbar!
     @IBOutlet weak var pickerView: UIPickerView!
     var refArtists: DatabaseReference!
     var convertedUrl = ""
@@ -28,7 +29,7 @@ class FBViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         textFieldName.text = hero?.name
-        
+         toolBar.isHidden = true
           pickerView.isHidden = true
          self.contacts = CoreData.fetchDetailsFormDb(entityName:"Contacts")
          refArtists = Database.database().reference().child("artists");
@@ -119,6 +120,7 @@ class FBViewController: UIViewController{
     }
     @IBAction func buttonforCountryCodes(sender: UIButton) {
         pickerView.isHidden = false
+        toolBar.isHidden = false
     }
    
 }
@@ -230,6 +232,15 @@ extension FBViewController:UIPickerViewDataSource,UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
          let kundObj = self.contacts[row] as! Contacts
       codeBtn.setTitle((kundObj.value(forKey: "countryName") as! String), for: .normal)
-             pickerView.isHidden = true
+        
 }
+    @IBAction func cancelAction(sender: UIBarButtonItem){
+        codeBtn.setTitle("91", for: .normal)
+        toolBar.isHidden = true
+        pickerView.isHidden = true
+    }
+    @IBAction func doneAction(sender: UIBarButtonItem){
+        toolBar.isHidden = true
+        pickerView.isHidden = true
+    }
 }

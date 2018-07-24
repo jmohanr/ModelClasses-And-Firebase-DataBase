@@ -13,11 +13,13 @@ class ArtistModel {
     var name: String?
     var genre: String?
     var imageUrl:String?
+    var countryCode:String?
     
-    init(id: String?, name: String?, genre: String?,imageUrl:String?){
+    init(id: String?, name: String?, genre: String?,imageUrl:String?,countryCode:String?){
         self.id = id
         self.name = name
         self.genre = genre
         self.imageUrl = imageUrl
+        self.countryCode = countryCode
 }
 }

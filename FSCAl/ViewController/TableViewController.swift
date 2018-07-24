@@ -79,8 +79,9 @@ class TableViewController: UITableViewController {
                     let artistId  = artistObject?["id"]
                     let artistGenre = artistObject?["artistEmailId"]
                     let artistimageUrl = artistObject?["artistImageUrl"]
+                    let artistCountryCode = artistObject?["artistCountryCode"]
                     //creating artist object with model and fetched values
-                    let artist = ArtistModel(id: artistId as! String?, name: artistName as! String?, genre: artistGenre as! String?, imageUrl: artistimageUrl as? String)
+                    let artist = ArtistModel(id: artistId as! String?, name: artistName as! String?, genre: artistGenre as! String?, imageUrl: artistimageUrl as? String,countryCode:artistCountryCode as? String)
                     //appending it to list
                     self.artistList.append(artist)
                 }
