@@ -104,12 +104,12 @@ class FBViewController: UIViewController{
         }
         else{
             if isValidEmail(testStr: textFieldEmail.text!) {
-                if (textFieldName.text?.isEmpty)! {
-                    updateArtist()
-                } else {
-                     addArtist()
-                }
-               
+//                if (textFieldName.text?.isEmpty)! {
+//                    updateArtist()
+//                } else {
+//
+//                }
+                   addArtist()
             }
             else {
                 labeltxt.text = "Please enter Preoper EmailId"
