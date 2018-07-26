@@ -11,41 +11,41 @@ import Firebase
 import CoreData
 import FirebaseAuth
 class TableViewController: UITableViewController {
- var refArtists: DatabaseReference!
-     var artistList = [ArtistModel]()
+    var refArtists: DatabaseReference!
+    var artistList = [ArtistModel]()
     var searchedList = [ArtistModel]()
-     var contacts: [NSManagedObject] = []
+    var contacts: [NSManagedObject] = []
     @IBOutlet weak var searchBar: UISearchBar!
-     var tableArray =  ""
-   
+    var tableArray =  ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-         fetchingData ()
-         callingApi()
+        fetchingData ()
+        callingApi()
         
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return artistList.count
     }
-
-
+    
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ViewControllerTableViewCell", for: indexPath) as! ViewControllerTableViewCell
         let candy = artistList[indexPath.row]
         cell.names.text = candy.name
-        cell.message.text = candy.genre
+        cell.message.text = candy.emailId
         if let myValue = candy.imageUrl as String?  {
             if myValue.isEmpty {
                 let data = UIImagePNGRepresentation(UIImage(named: "Profile")!)
                 let decodedimage:UIImage = UIImage(data: data!)!
                 cell.profileImage.image = decodedimage
             } else {
-            let dataDecoded:NSData = NSData(base64Encoded: myValue, options: NSData.Base64DecodingOptions(rawValue: 0))!
-            let decodedimage:UIImage = UIImage(data: dataDecoded as Data)!
-            cell.profileImage.image = decodedimage
-            
-        }
+                let dataDecoded:NSData = NSData(base64Encoded: myValue, options: NSData.Base64DecodingOptions(rawValue: 0))!
+                let decodedimage:UIImage = UIImage(data: dataDecoded as Data)!
+                cell.profileImage.image = decodedimage
+                
+            }
         }
         
         
@@ -61,7 +61,14 @@ class TableViewController: UITableViewController {
         self.navigationController?.pushViewController(viewcontroller, animated: true)
         
     }
-
+    /*
+     "artistName": textFieldName.text! as String,
+     "artistPassword": textFieldPassword.text! as String,
+     "artistImageUrl": convertedUrl,
+     "artistEmailId": textFieldEmail.text! as String,
+     "artistphoneNumber": textFieldPhoneNumber.text! as String,
+     "artistCountryCode": codeBtn.currentTitle
+     */
     
     func fetchingData (){
         refArtists = Database.database().reference().child("artists");
@@ -77,24 +84,26 @@ class TableViewController: UITableViewController {
                     let artistObject = artists.value as? [String: AnyObject]
                     let artistName  = artistObject?["artistName"]
                     let artistId  = artistObject?["id"]
-                    let artistGenre = artistObject?["artistEmailId"]
+                    let artistEmailId = artistObject?["artistEmailId"]
                     let artistimageUrl = artistObject?["artistImageUrl"]
                     let artistCountryCode = artistObject?["artistCountryCode"]
+                    let artistLastName = artistObject?["artistLastName"]
+                    let artistphoneNumber = artistObject?["artistphoneNumber"]
                     //creating artist object with model and fetched values
-                    let artist = ArtistModel(id: artistId as! String?, name: artistName as! String?, genre: artistGenre as! String?, imageUrl: artistimageUrl as? String,countryCode:artistCountryCode as? String)
+                    let artist = ArtistModel(id: artistId as! String?, name: artistName as! String?, emailId: artistEmailId as! String?, imageUrl: artistimageUrl as? String,countryCode:artistCountryCode as? String, lastname: artistLastName as? String, phoneNumber: artistphoneNumber as? String)
                     //appending it to list
                     self.artistList.append(artist)
                 }
                 DispatchQueue.main.async {
-                 self.searchedList = self.artistList
-                     self.tableView.reloadData()
+                    self.searchedList = self.artistList
+                    self.tableView.reloadData()
                 }
-               
+                
             }
         })
         
     }
-   
+    
     
     @IBAction func signOutAction(_ sender: Any) {
         try! Auth.auth().signOut()
@@ -144,7 +153,7 @@ extension TableViewController: UISearchBarDelegate,UISearchDisplayDelegate {
             }
             DispatchQueue.main.async {
                 self.contacts = CoreData.fetchDetailsFormDb(entityName:"Contacts")
-               
+                
             }
         }
     }

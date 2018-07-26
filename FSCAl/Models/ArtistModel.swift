@@ -11,15 +11,20 @@ class ArtistModel {
     
     var id: String?
     var name: String?
-    var genre: String?
+    var lastname:String?
+    var emailId: String?
     var imageUrl:String?
     var countryCode:String?
+    var phoneNumber:String?
     
-    init(id: String?, name: String?, genre: String?,imageUrl:String?,countryCode:String?){
+    
+    init(id: String?, name: String?, emailId: String?,imageUrl:String?,countryCode:String?,lastname:String?,phoneNumber:String?){
         self.id = id
         self.name = name
-        self.genre = genre
+        self.emailId = emailId
         self.imageUrl = imageUrl
         self.countryCode = countryCode
-}
+        self.lastname = lastname
+        self.phoneNumber = phoneNumber
+    }
 }

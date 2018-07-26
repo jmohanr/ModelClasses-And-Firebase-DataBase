@@ -281,7 +281,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="goZ-e4-34c">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="FirstNameName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="goZ-e4-34c">
                                 <rect key="frame" x="20" y="229" width="335" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="rpy-Th-Stf"/>
@@ -293,14 +293,14 @@
                                     <outlet property="delegate" destination="Cp1-1g-c5G" id="1ke-Vd-mXk"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J4T-lf-S7e">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="LastName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J4T-lf-S7e">
                                 <rect key="frame" x="20" y="289" width="335" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="snR-cK-UjA"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="Cp1-1g-c5G" id="GDg-D7-Wsm"/>
                                 </connections>
@@ -437,8 +437,8 @@
                         <outlet property="profileImage" destination="m3e-dm-sSJ" id="f4E-HU-Njv"/>
                         <outlet property="saveBtn" destination="sgL-er-MR2" id="1jM-fc-YEl"/>
                         <outlet property="textFieldEmail" destination="2LF-In-HgQ" id="8Bq-02-LoF"/>
+                        <outlet property="textFieldLastName" destination="J4T-lf-S7e" id="6N3-Qb-IYK"/>
                         <outlet property="textFieldName" destination="goZ-e4-34c" id="xCt-3I-mfT"/>
-                        <outlet property="textFieldPassword" destination="J4T-lf-S7e" id="l9I-81-5X8"/>
                         <outlet property="textFieldPhoneNumber" destination="aEN-ms-Ufl" id="bdc-ze-5rr"/>
                         <outlet property="toolBar" destination="nSP-Uf-SL2" id="KP4-dt-SK9"/>
                     </connections>
