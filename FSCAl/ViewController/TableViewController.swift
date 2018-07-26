@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 import CoreData
-
+import FirebaseAuth
 class TableViewController: UITableViewController {
  var refArtists: DatabaseReference!
      var artistList = [ArtistModel]()
@@ -96,6 +96,15 @@ class TableViewController: UITableViewController {
     }
    
     
+    @IBAction func signOutAction(_ sender: Any) {
+        try! Auth.auth().signOut()
+        UserDefaults.standard.removeObject(forKey: "LoggedIn")
+        UserDefaults.standard.synchronize()
+        if let storyboard = self.storyboard {
+            let vc = storyboard.instantiateViewController(withIdentifier: "LogInViewController")
+            self.present(vc, animated: false, completion: nil)
+        }
+    }
 }
 extension TableViewController: UISearchBarDelegate,UISearchDisplayDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange text: String) {

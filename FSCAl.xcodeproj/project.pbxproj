@@ -29,6 +29,7 @@
 		84D7088520E4E3C900126D10 /* SecViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D7088420E4E3C900126D10 /* SecViewController.swift */; };
 		84D7088920E4E74300126D10 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D7088820E4E74300126D10 /* TableViewCell.swift */; };
 		84D7088B20E4FA7100126D10 /* HeroStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D7088A20E4FA6E00126D10 /* HeroStats.swift */; };
+		84DB072C21097EAD000999A4 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DB072B21097EAD000999A4 /* SignUpViewController.swift */; };
 		84FD425C2105A2B000224610 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FD425B2105A2B000224610 /* ContactsViewController.swift */; };
 		84FD42602105A77000224610 /* ContactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FD425F2105A77000224610 /* ContactsTableViewCell.swift */; };
 		84FD42622105BF6500224610 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84FD42612105BF6500224610 /* GoogleService-Info.plist */; };
@@ -84,6 +85,7 @@
 		84D7088420E4E3C900126D10 /* SecViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecViewController.swift; sourceTree = "<group>"; };
 		84D7088820E4E74300126D10 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		84D7088A20E4FA6E00126D10 /* HeroStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroStats.swift; sourceTree = "<group>"; };
+		84DB072B21097EAD000999A4 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		84FD425B2105A2B000224610 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		84FD425F2105A77000224610 /* ContactsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewCell.swift; sourceTree = "<group>"; };
 		84FD42612105BF6500224610 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				84C01ACB2107468A00FD6619 /* LogInViewController.swift */,
 				84FD42692105D13F00224610 /* TableViewController.swift */,
 				84C01AC92107467D00FD6619 /* SplashViewController.swift */,
+				84DB072B21097EAD000999A4 /* SignUpViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -423,6 +426,7 @@
 				84FD425C2105A2B000224610 /* ContactsViewController.swift in Sources */,
 				84FD42662105C33800224610 /* ArtistModel.swift in Sources */,
 				84C01AD02107469700FD6619 /* WalkThroughViewController.swift in Sources */,
+				84DB072C21097EAD000999A4 /* SignUpViewController.swift in Sources */,
 				841B6CA420E6130E007EEE66 /* FSCAI.xcdatamodeld in Sources */,
 				842A905320E3A4F900BC687D /* ViewController.swift in Sources */,
 				84FD426A2105D13F00224610 /* TableViewController.swift in Sources */,
