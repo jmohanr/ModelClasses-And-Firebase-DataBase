@@ -9,6 +9,7 @@ target 'FSCAl' do
   pod 'FSCalendar'
   pod 'Firebase/Core'
   pod 'Firebase/Database'
+  pod 'Firebase/Auth'
   end
 
 
