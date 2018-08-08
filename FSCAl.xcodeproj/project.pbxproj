@@ -20,6 +20,7 @@
 		842A906620E3A4FE00BC687D /* FSCAlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A906520E3A4FE00BC687D /* FSCAlTests.swift */; };
 		842A907120E3A4FE00BC687D /* FSCAlUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A907020E3A4FE00BC687D /* FSCAlUITests.swift */; };
 		847CBEA720EA4FA60005C2AA /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CBEA620EA4FA60005C2AA /* CollectionViewCell.swift */; };
+		84A53FD9211AF00E009B1BFF /* PageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A53FD8211AF00E009B1BFF /* PageController.swift */; };
 		84C01ACA2107467D00FD6619 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C01AC92107467D00FD6619 /* SplashViewController.swift */; };
 		84C01ACC2107468A00FD6619 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C01ACB2107468A00FD6619 /* LogInViewController.swift */; };
 		84C01ACF2107469700FD6619 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C01ACD2107469700FD6619 /* ThirdViewController.swift */; };
@@ -76,6 +77,7 @@
 		842A907020E3A4FE00BC687D /* FSCAlUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSCAlUITests.swift; sourceTree = "<group>"; };
 		842A907220E3A4FE00BC687D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		847CBEA620EA4FA60005C2AA /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		84A53FD8211AF00E009B1BFF /* PageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageController.swift; sourceTree = "<group>"; };
 		84C01AC92107467D00FD6619 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		84C01ACB2107468A00FD6619 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		84C01ACD2107469700FD6619 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				84FD42692105D13F00224610 /* TableViewController.swift */,
 				84C01AC92107467D00FD6619 /* SplashViewController.swift */,
 				84DB072B21097EAD000999A4 /* SignUpViewController.swift */,
+				84A53FD8211AF00E009B1BFF /* PageController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/ImageSlideshow/ImageSlideshow.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -387,6 +391,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSCalendar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImageSlideshow.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -428,6 +433,7 @@
 				84C01AD02107469700FD6619 /* WalkThroughViewController.swift in Sources */,
 				84DB072C21097EAD000999A4 /* SignUpViewController.swift in Sources */,
 				841B6CA420E6130E007EEE66 /* FSCAI.xcdatamodeld in Sources */,
+				84A53FD9211AF00E009B1BFF /* PageController.swift in Sources */,
 				842A905320E3A4F900BC687D /* ViewController.swift in Sources */,
 				84FD426A2105D13F00224610 /* TableViewController.swift in Sources */,
 				84C01ACC2107468A00FD6619 /* LogInViewController.swift in Sources */,
@@ -616,15 +622,18 @@
 			baseConfigurationReference = BDF85EDC829B25824C933DA7 /* Pods-FSCAl.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7RF3MH4348;
 				INFOPLIST_FILE = FSCAl/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Addtech.FSCAl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -635,15 +644,18 @@
 			baseConfigurationReference = F99B4C1D75E409BE81DEF701 /* Pods-FSCAl.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7RF3MH4348;
 				INFOPLIST_FILE = FSCAl/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Addtech.FSCAl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -10,6 +10,7 @@ target 'FSCAl' do
   pod 'Firebase/Core'
   pod 'Firebase/Database'
   pod 'Firebase/Auth'
+  pod 'ImageSlideshow', '~> 1.6'
   end
 
 

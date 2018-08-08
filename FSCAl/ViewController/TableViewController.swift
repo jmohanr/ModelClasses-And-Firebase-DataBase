@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import CoreData
 import FirebaseAuth
+@available(iOS 10.0, *)
 class TableViewController: UITableViewController {
     var refArtists: DatabaseReference!
     var artistList = [ArtistModel]()
@@ -115,6 +116,7 @@ class TableViewController: UITableViewController {
         }
     }
 }
+@available(iOS 10.0, *)
 extension TableViewController: UISearchBarDelegate,UISearchDisplayDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange text: String) {
         if (text == "") {

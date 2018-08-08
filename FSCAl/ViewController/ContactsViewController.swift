@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 
+@available(iOS 10.0, *)
 class ContactsViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     var contacts: [NSManagedObject] = []
     @IBOutlet weak var tableView: UITableView!

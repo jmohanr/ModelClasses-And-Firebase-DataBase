@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import  CoreData
 
+@available(iOS 10.0, *)
 class FBViewController: UIViewController{
     var contacts: [NSManagedObject] = []
     @IBOutlet weak var textFieldEmail: UITextField!
@@ -156,6 +157,7 @@ class FBViewController: UIViewController{
 }
 
 
+@available(iOS 10.0, *)
 extension FBViewController:UIImagePickerControllerDelegate,
 UINavigationControllerDelegate {
     
@@ -202,6 +204,8 @@ UINavigationControllerDelegate {
         
     }
 }
+@available(iOS 10.0, *)
+@available(iOS 10.0, *)
 extension FBViewController:UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -244,6 +248,7 @@ extension FBViewController:UITextFieldDelegate {
         return emailTest.evaluate(with: testStr)
     }
 }
+@available(iOS 10.0, *)
 extension FBViewController:UIPickerViewDataSource,UIPickerViewDelegate {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1

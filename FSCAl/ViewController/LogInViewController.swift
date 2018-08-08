@@ -27,8 +27,12 @@ class LogInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.hideKeyboard()
+        var dict:[String:Any] = ["1":90,"2":21,"3":31]
+  
+        for i in 1..<dict.count{
+            print(dict[String(i)] as Any)
+        }
+            self.hideKeyboard()
         signBtn.layer.cornerRadius = signBtn.frame.size.height/2
         NotificationCenter.default.addObserver(self, selector: #selector(LogInViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(LogInViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)

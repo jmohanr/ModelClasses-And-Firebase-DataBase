@@ -12,6 +12,8 @@ struct jsonData {
 import UIKit
 import CoreData
 
+@available(iOS 10.0, *)
+@available(iOS 10.0, *)
 class SecViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!

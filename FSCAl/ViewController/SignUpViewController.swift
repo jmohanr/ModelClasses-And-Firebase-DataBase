@@ -17,7 +17,8 @@ class SignUpViewController: UIViewController {
  
     override func viewDidLoad() {
         super.viewDidLoad()
-
+let names = "hkgkhighkjg"
+print(names.count)
         // Do any additional setup after loading the view.
     }
     func isValidEmail(testStr:String) -> Bool {

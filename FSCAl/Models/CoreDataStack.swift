@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 import CoreData
 
+@available(iOS 10.0, *)
+@available(iOS 10.0, *)
 class CoreDataStack: NSObject {
 
     
@@ -63,6 +65,7 @@ class CoreDataStack: NSObject {
 
 
 
+@available(iOS 10.0, *)
 extension CoreDataStack {
     
     func applicationDocumentsDirectory() {

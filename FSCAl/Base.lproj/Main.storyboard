@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -447,6 +448,38 @@
             </objects>
             <point key="canvasLocation" x="-868" y="179"/>
         </scene>
+        <!--Page Controller-->
+        <scene sceneID="Zsn-hR-Tnx">
+            <objects>
+                <viewController storyboardIdentifier="PageController" id="Wkf-W8-fqV" customClass="PageController" customModule="FSCAl" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ly1-tk-Jyo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xCz-po-fNr" customClass="ImageSlideshow" customModule="ImageSlideshow">
+                                <rect key="frame" x="10" y="74" width="355" height="250"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="Hr2-Se-Ouk"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IMv-9H-qkt" firstAttribute="trailing" secondItem="xCz-po-fNr" secondAttribute="trailing" constant="10" id="Len-QX-ipz"/>
+                            <constraint firstItem="xCz-po-fNr" firstAttribute="leading" secondItem="IMv-9H-qkt" secondAttribute="leading" constant="10" id="myh-km-zRP"/>
+                            <constraint firstItem="xCz-po-fNr" firstAttribute="top" secondItem="IMv-9H-qkt" secondAttribute="top" constant="10" id="nZe-kf-p9K"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IMv-9H-qkt"/>
+                    </view>
+                    <connections>
+                        <outlet property="slideshow" destination="xCz-po-fNr" id="LdY-IY-KTr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dHy-gj-0q0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-170.40000000000001" y="178.56071964017991"/>
+        </scene>
         <!--Contacts-->
         <scene sceneID="ZNZ-KU-m1h">
             <objects>
@@ -524,11 +557,18 @@
                                 <action selector="signOutAction:" destination="GoA-sk-fPd" id="DW2-aK-Zke"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="MpT-zc-EiS">
-                            <connections>
-                                <segue destination="Cp1-1g-c5G" kind="show" id="v8t-XJ-gox"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="MpT-zc-EiS">
+                                <connections>
+                                    <segue destination="Cp1-1g-c5G" kind="show" id="v8t-XJ-gox"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="bookmarks" id="rzV-aI-7M3">
+                                <connections>
+                                    <segue destination="Wkf-W8-fqV" kind="show" id="y0X-yp-LFe"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="searchBar" destination="DE6-WR-G9L" id="wqg-sN-CaL"/>
@@ -841,6 +881,21 @@
             </objects>
             <point key="canvasLocation" x="-5343" y="179"/>
         </scene>
+        <!--Image Slider View Controller-->
+        <scene sceneID="L6J-wn-Fvl">
+            <objects>
+                <viewController id="VwL-xt-kzA" customClass="TNImageSliderViewController" customModule="TNImageSliderViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="k63-xN-GSM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="nVS-1B-pGW"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AYg-bO-HPc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="472" y="406"/>
+        </scene>
         <!--Page View Controller-->
         <scene sceneID="ZR5-U8-zIN">
             <objects>
@@ -922,12 +977,27 @@
             </objects>
             <point key="canvasLocation" x="-2263" y="899"/>
         </scene>
+        <!--Image Slider View Controller-->
+        <scene sceneID="jdZ-3U-kDd">
+            <objects>
+                <viewController id="ibk-Im-Xso" customClass="TNImageSliderViewController" customModule="TNImageSliderViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6dV-JC-Qxh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="zjl-3M-hB7"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bn6-mH-dJf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-130" y="-493"/>
+        </scene>
     </scenes>
     <resources>
         <image name="6" width="414" height="736"/>
         <image name="Profile" width="90" height="90"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="GLK-jH-Wge"/>
+        <segue reference="AmY-q6-rzY"/>
     </inferredMetricsTieBreakers>
 </document>

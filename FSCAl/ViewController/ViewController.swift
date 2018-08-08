@@ -44,6 +44,7 @@ practice ()
     
     func practice () {
         var name = 0
+        
         let myarray = ["1","2","3","4"]
         var daysDictionary = [1 : "SunDay",2 : "MonDay",3 : "TuesDay",4 : "WednesDay",5 : "ThursDay",6 : "FriDay",7 : "SaturDay"]
         for _ in myarray {
