@@ -7,9 +7,13 @@
 //
 
 import UIKit
-import FSCalendar
 
-class ViewController: UIViewController,FSCalendarDelegate,FSCalendarDataSource {
+
+class ViewController: UIViewController{
+    /*
+     import FSCalendar
+}
+,FSCalendarDelegate,FSCalendarDataSource {
     @IBOutlet weak var fsCalender: FSCalendar!
     var selectedDate = [String]()
     override func viewDidLoad() {
@@ -84,7 +88,7 @@ practice ()
     }
    
     
-
+*/
 
 }
 

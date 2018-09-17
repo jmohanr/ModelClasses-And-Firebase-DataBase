@@ -9,46 +9,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FSCAl/Models/APIService.swift"
-            timestampString = "554125993.687827"
+            filePath = "FSCAl/ViewController/DownloadViewController.swift"
+            timestampString = "555853300.606059"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "callTheGetApi(url:completion:)"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static FSCAl.APIService.callTheGetApi(url: Swift.String, completion: (Swift.Array&lt;Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "FSCAl"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Applications/ModelClasses-And-Firebase-DataBase/FSCAl/Models/APIService.swift"
-                  timestampString = "555418366.7338639"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "145">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__ObjC.URLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static FSCAl.APIService.callTheGetApi(url: Swift.String, completion: (Swift.Array&lt;Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "FSCAl"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Applications/ModelClasses-And-Firebase-DataBase/FSCAl/Models/APIService.swift"
-                  timestampString = "555418366.737798"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18"
-                  offsetFromSymbolStart = "46">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -57,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FSCAl/Models/APIService.swift"
-            timestampString = "554125993.688313"
+            filePath = "FSCAl/ViewController/DownloadViewController.swift"
+            timestampString = "555853300.606654"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "callTheGetApi(url:completion:)"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

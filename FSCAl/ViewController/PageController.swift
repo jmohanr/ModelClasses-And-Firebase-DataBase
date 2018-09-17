@@ -8,6 +8,7 @@
 
 import UIKit
 import ImageSlideshow
+import CoreGraphics
 
 class PageController: UIViewController {
     open override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
@@ -18,6 +19,21 @@ class PageController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+let arr = [1,2,3,4,5,8,10]
+        for i in arr {
+            if i == 4 {
+                break
+            }
+            print(i)
+        }
+        for i in arr {
+            if i == 4 {
+                continue
+            }
+            print(i)
+        }
+        let mapData = arr.lazy.map{$0*3}
+        print(mapData[3])
      // creating closers
         let storedCloser:(Int,Int)->Int = {$0*$1}
     let counts = storedCloser(2,5)
@@ -38,7 +54,7 @@ class PageController: UIViewController {
         // optional way to show activity indicator during image load (skipping the line will show no activity indicator)
         slideshow.activityIndicator = DefaultActivityIndicator()
         slideshow.currentPageChanged = { page in
-            print("current page:", page)
+           // print("current page:", page)
         }
         
         // can be used with other sample sources as `afNetworkingSource`, `alamofireSource` or `sdWebImageSource` or `kingfisherSource`

@@ -17,7 +17,6 @@ class SplashViewController: UIViewController {
             let appDelegate = UIApplication.shared.delegate! as! AppDelegate
             let initialViewController = self.storyboard!.instantiateViewController(withIdentifier: "HomeViewController")
             appDelegate.window?.rootViewController = initialViewController
-            
             appDelegate.window?.makeKeyAndVisible()
             
         } else {
